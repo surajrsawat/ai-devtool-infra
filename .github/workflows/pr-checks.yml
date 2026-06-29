@@ -1,0 +1,20 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Validate workflow yaml presence
+        run: ls -la .github/workflows
+      - name: Infrastructure lint placeholder
+        run: echo "Infra PR checks placeholder - add terraform fmt/validate in follow-up"
