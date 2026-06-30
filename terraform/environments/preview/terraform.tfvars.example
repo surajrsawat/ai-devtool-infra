@@ -1,0 +1,3 @@
+environment = "preview"
+region = "us-east-1"
+project = "ai-devtool"
